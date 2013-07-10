@@ -5,6 +5,7 @@
  */
 (function ($) {
     $(document).on('click', '[data-show]', function(e) {
+        e.preventDefault();
         var targetElement = $(e.target).data('show');
 
         $(targetElement).show();
@@ -12,6 +13,7 @@
     });
 
     $(document).on('click', '[data-hide]', function(e) {
+        e.preventDefault();
         var targetElement = $(e.target).data('hide');
 
         $(targetElement).hide();
@@ -19,33 +21,29 @@
     });
 
     $(document).on('click', '[data-toggle]', function(e) {
-        var targetElement = $(e.target).data('toggle');
+        e.preventDefault();
+        var targetElement = $(e.currentTarget).data('toggle');
 
-        $(targetElement).toggle();
-
-        if ($(targetElement).is(':visible')) {
-            $(this).addClass('active');
-        } else {
-            $(this).removeClass('active');
-        }
+        $(targetElement)
+            .toggle()
+            .toggleClass('active')
+        ;
     });
 
     $(document).on('click', '[data-toggle-only]', function(e) {
-        var targetElement = $(e.target).data('toggle-only');
+        e.preventDefault();
+        var targetElement = $(e.currentTarget).data('toggleOnly');
 
         $('[data-toggle-only]').each(function(){
-            var target = $(this).data('toggle-only');
+            var target = $(this).data('toggleOnly');
             if (target !== targetElement) {
                 $(target).hide();
             }
         });
 
-        if ($(targetElement).is(':visible')) {
-            $(this).addClass('active');
-        } else {
-            $(this).removeClass('active');
-        }
-
-        $(targetElement).toggle();
+        $(targetElement)
+            .toggle()
+            .toggleClass('active')
+        ;
     });
 })(jQuery);
