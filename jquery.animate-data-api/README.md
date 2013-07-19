@@ -6,8 +6,8 @@ This jquery plugin allow to trigger class based animation using data-api
 Dependencies
 ------------
 
-    * jquery (>= 1.9)
-    * jqueryui.effect.core.js (>= 1.10)
+- jquery (>= 1.9)
+- jqueryui.effect.core.js (>= 1.10)
 
 
 Usage
