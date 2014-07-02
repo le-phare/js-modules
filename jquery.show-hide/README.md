@@ -9,7 +9,7 @@ This module allow you to handle visibility of DOM elements based on the HTML5 da
 ```
 <a href="#" data-show="#slider">Show the slider</a>
 
-<div id="slider" class="hide">
+<div id="slider" style="display:none;">
     ... a slider
 </div>
 
@@ -20,7 +20,7 @@ This module allow you to handle visibility of DOM elements based on the HTML5 da
 ```
 <a href="#" data-hide="#ads">Hide the banner</a>
 
-<div id="ads" class="hide">
+<div id="ads" style="display:none;">
     ... a advertisment banner.
 </div>
 ```
@@ -30,7 +30,7 @@ This module allow you to handle visibility of DOM elements based on the HTML5 da
 ```
 <a href="#" data-toggle="#images">Toggle images</a>
 
-<div id="images" class="hide">
+<div id="images" style="display:none;">
     ... some great images.
 </div>
 ```
@@ -41,7 +41,7 @@ This module allow you to handle visibility of DOM elements based on the HTML5 da
 ```
 <a href="#" data-toggle-only="#images">Toggle images</a>
 
-<div id="images" class="hide">
+<div id="images" style="display:none;">
     ... some great images.
 </div>
 ```
